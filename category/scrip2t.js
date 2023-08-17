@@ -46,19 +46,26 @@ const categoryList = new CategoryService();
 const productList = new ProductsServices();
 
 function createCategory() {
-    const categoryName = "Doce";
+    const categoryName = document.getElementById("categoryName").value;
 
     categoryList.addCategory(categoryName);
 
-    console.log(categoryList.categories);
+    //console.log(categoryList.categories);
 }
 
 function createProduct() {
-    const productName = "Bolo";
-    const productPrice = 20;
+    const productName = document.getElementById("productName").value;
+    const productPrice = document.getElementById("productPrice").value;
     const productCategory = categoryList.categories[0];
 
     productList.addProduct(productName, productPrice, productCategory);
 
-    console.log(productList.products);
+    //console.log(productList.products);
+}
+
+function cleanFields() {
+    document.getElementById("categoryName").value = "";
+    document.getElementById("productName").value = "";
+    document.getElementById("productPrice").value = "";
+    document.getElementById("productCategory").value = "";
 }
