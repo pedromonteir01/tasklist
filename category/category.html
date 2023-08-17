@@ -10,11 +10,35 @@
 <body>
     <main id="container">
         <h1>🗿 Categorias & Produtos</h1>
-        <article id="form-cointainer">
+        <article class="form-container">
             <h2>📂Criar Categoria</h2>
-            <label for="">Nome da Categoria</label>
+            <label for="categoryName">Nome da Categoria</label>
             <input type="text" id="categoryName" required>
             <button class="btn">Criar Categoria</button>
+        </article>
+        <article class="form-container">
+            <h2>Criar Produto</h2>
+
+            <section id="productInfos">
+                <div class="productInputs">
+                    <label for="productName">Nome do produto:</label>
+                    <input type="text" id="productName" required>
+                </div>
+                <div class="productInputs">
+                    <label for="productPrice">Preço:</label>
+                    <input type="number" id="productPrice" required>
+                </div>
+            </section>
+        
+            <label for="">Categoria:</label>
+            <select id="productCategory">
+            </select>
+            <button class="btn">Criar Produto</button>
+        </article>
+        <!--lista de categorias-->
+        <article class="list-container">
+            <h2>Categorias & e produtos</h2>
+            <ul id="categories"></ul>
         </article>
     </main>
 </body>
